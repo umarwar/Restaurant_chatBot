@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies - The Taste of Eminabad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Foodies</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Foodies</h1>
+            <p>The Taste of Eminabad!</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="karahi.jpg" alt="Chicken Karahi">
+                    <h3>Chicken Karahi</h3>
+                    <p>A rich and spicy dish cooked with tender chicken and flavorful spices.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="biryani.jpg" alt="Biryani">
+                    <h3>Biryani</h3>
+                    <p>Aromatic basmati rice cooked with spices and meat or vegetables.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="tikka.jpg" alt="Tikka">
+                    <h3>Tikka</h3>
+                    <p>Succulent pieces of chicken marinated and grilled to perfection.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="kabab.jpg" alt="Kabab">
+                    <h3>Kabab</h3>
+                    <p>Juicy, flavorful skewers of minced meat, grilled to perfection.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="samosa.jpg" alt="Samosa">
+                    <h3>Samosa</h3>
+                    <p>Crispy pastries filled with spiced potatoes and peas.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="lassi.jpg" alt="lassi">
+                    <h3>Samosa</h3>
+                    <p>Delicious Lassi.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="beverages.jpg" alt="Beverages">
+                    <h3>Beverages</h3>
+                    <p>Refreshing drinks: Coke, Sprite, Pepsi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="contact" class="location-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <p>Visit us at Eminabad, Gujranwala</p>
+            <div class="map">
+                <!-- Embed Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.4440977920624!2d74.2680434760492!3d32.04456852663992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f109ecba2c5db%3A0x637c3ad4f90c80a7!2sEminabad%2C%20Gujranwala%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1692718338536!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-info">
+                <p>Call us: +92 123 456789</p>
+                <p>Email: info@foodies.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chatbot Button -->
+    <div class="chatbot-button" id="chatbotButton">
+        <img src="chatbot.png" alt="Chat with us">
+    </div>
+
+    <!-- Chatbot Pop-up -->
+    <div class="chatbot-popup" id="chatbotPopup">
+        <div class="chatbot-header">
+            <h2>Chat with Us</h2>
+            <span class="close-btn" id="closeChatbot">&times;</span>
+        </div>
+        <iframe width="100%" height="400" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/78013743-2d1f-4493-a523-d94c0990a07e"></iframe>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="insta.png" alt="Instagram"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            </div>
+            <p>&copy; 2024 Foodies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const chatbotButton = document.getElementById('chatbotButton');
+        const chatbotPopup = document.getElementById('chatbotPopup');
+        const closeChatbot = document.getElementById('closeChatbot');
+
+        chatbotButton.addEventListener('click', function() {
+            chatbotPopup.style.display = 'block';
+        });
+
+        closeChatbot.addEventListener('click', function() {
+            chatbotPopup.style.display = 'none';
+        });
+
+        window.onclick = function(event) {
+            if (event.target == chatbotPopup) {
+                chatbotPopup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
